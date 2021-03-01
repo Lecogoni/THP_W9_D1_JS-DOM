@@ -102,5 +102,22 @@ for (let i = 0; i < card.length; i++) {
 
 /// Fonctionnalité 7 :
 
+let greyButton = document.getElementsByClassName("btn-secondary")[0];
+let rowDiv = document.getElementsByClassName("row")[1];
 
-let lastCard = document.getElementsByClassName("col-md-4")[5];
+
+greyButton.addEventListener("click", function(){ 
+  let lastCard = document.getElementsByClassName("row")[1].lastElementChild;
+  rowDiv.insertBefore(lastCard, rowDiv.firstChild);
+});
+
+/// Fonctionnalité 8 :
+
+let blueButton = document.getElementsByClassName("btn-primary")[0];
+console.log(blueButton);
+
+blueButton.addEventListener("click", function(event){ 
+  event.preventDefault();
+  let firstCard = document.getElementsByClassName("row")[1].firstElementChild;
+  rowDiv.append(firstCard);
+});
