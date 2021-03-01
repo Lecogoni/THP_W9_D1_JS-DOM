@@ -119,5 +119,6 @@ console.log(blueButton);
 blueButton.addEventListener("click", function(event){ 
   event.preventDefault();
   let firstCard = document.getElementsByClassName("row")[1].firstElementChild;
-  rowDiv.append(firstCard);
+  console.log(firstCard);
+  firstCard.parentNode.appendChild(firstCard);
 });
